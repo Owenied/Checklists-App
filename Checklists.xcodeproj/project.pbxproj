@@ -12,6 +12,7 @@
 		49809D4D1E9EEF8100AE64EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49809D4B1E9EEF8100AE64EC /* Main.storyboard */; };
 		49809D4F1E9EEF8100AE64EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49809D4E1E9EEF8100AE64EC /* Assets.xcassets */; };
 		49809D521E9EEF8100AE64EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49809D501E9EEF8100AE64EC /* LaunchScreen.storyboard */; };
+		49809D5A1EA00CF300AE64EC /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49809D591EA00CF300AE64EC /* ChecklistItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		49809D4E1E9EEF8100AE64EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49809D511E9EEF8100AE64EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49809D531E9EEF8100AE64EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49809D591EA00CF300AE64EC /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				49809D471E9EEF8100AE64EC /* AppDelegate.swift */,
 				49809D491E9EEF8100AE64EC /* ChecklistViewController.swift */,
+				49809D591EA00CF300AE64EC /* ChecklistItem.swift */,
 				49809D4B1E9EEF8100AE64EC /* Main.storyboard */,
 				49809D4E1E9EEF8100AE64EC /* Assets.xcassets */,
 				49809D501E9EEF8100AE64EC /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49809D4A1E9EEF8100AE64EC /* ChecklistViewController.swift in Sources */,
+				49809D5A1EA00CF300AE64EC /* ChecklistItem.swift in Sources */,
 				49809D481E9EEF8100AE64EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
