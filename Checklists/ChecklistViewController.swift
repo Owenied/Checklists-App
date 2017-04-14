@@ -12,6 +12,7 @@ class ChecklistViewController: UITableViewController {
     
     var items: [ChecklistItem]
     
+    // Current data model
     required init?(coder aDecoder: NSCoder) {
         
         items = [ChecklistItem]()
@@ -54,11 +55,13 @@ class ChecklistViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // the number of rows in the app based on the size of the storage array
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
     
+    // Adding the cells c/w text and checkmark to the view
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -71,6 +74,7 @@ class ChecklistViewController: UITableViewController {
         return cell
     }
     
+    // When a row is tapped by the user
     override func tableView(_ tableView: UITableView,
                             didSelectRowAt indexPath: IndexPath) {
         
@@ -79,9 +83,22 @@ class ChecklistViewController: UITableViewController {
             item.toggleChecked()
             configureCheckmark(for: cell, with: item)
         }
+        // Stops cells from remaining highlighted when tapped i.e. the cell will highlight then revert
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    // Deleting a row
+    override func tableView(_ tableView: UITableView,
+                            commit editingStyle: UITableViewCellEditingStyle,
+                            forRowAt indexPath: IndexPath) {
+        items.remove(at: indexPath.row)
+        
+        let indexPaths = [indexPath]
+        tableView.deleteRows(at: indexPaths,
+                             with: .automatic)
+    }
+    
+    // Checkmark selection on / off
     func configureCheckmark(for cell: UITableViewCell,
                             with item: ChecklistItem) {
         
@@ -92,19 +109,35 @@ class ChecklistViewController: UITableViewController {
         }
     }
     
+    // Configure text function
     func configureText(for cell: UITableViewCell,
                        with item: ChecklistItem) {
         let label = cell.viewWithTag(1000) as! UILabel
         label.text = item.text
     }
     
-
+    // Add a new to-do item row
+    @IBAction func addItem() {
+        
+        let newRowIndex = items.count
+        
+        let item = ChecklistItem()
+        item.text = "I am a new row"
+        item.checked = false
+        items.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
+    }
 
 }
 
 // To-do List:
 // -----------
-// 1.
+// 1. Add a navigation bar
+// 2. Add an add item button
+// 3. Add ability to delete rows
 
 
 
