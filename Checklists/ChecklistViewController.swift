@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChecklistViewController: UITableViewController {
+class ChecklistViewController: UITableViewController, AddItemViewControllerDelegate {
     
     var items: [ChecklistItem]
     
@@ -116,28 +116,43 @@ class ChecklistViewController: UITableViewController {
         label.text = item.text
     }
     
-    // Add a new to-do item row
-    @IBAction func addItem() {
-        
+    // AddItemViewControllerDegegate Protocol methods to cancel
+    func addItemViewControllerDidCancel(_ controller: AddItemViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // AddItemViewControllerDegegate Protocol methods to save new user "to-do" item
+    func addItemViewController(_ controller: AddItemViewController,
+                               didFinishAdding item: ChecklistItem) {
         let newRowIndex = items.count
-        
-        let item = ChecklistItem()
-        item.text = "I am a new row"
-        item.checked = false
         items.append(item)
         
         let indexPath = IndexPath(row: newRowIndex, section: 0)
         let indexPaths = [indexPath]
         tableView.insertRows(at: indexPaths, with: .automatic)
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // Segue into the Add Item screen
+    override func prepare(for segue: UIStoryboardSegue,
+                          sender: Any?) {
+        
+        if segue.identifier == "AddItem" {
+            let navigationController = segue.destination as! UINavigationController
+            let controller = navigationController.topViewController as! AddItemViewController
+            controller.delegate = self
+        }
     }
 
 }
 
 // To-do List:
 // -----------
-// 1. Add a navigation bar
-// 2. Add an add item button
-// 3. Add ability to delete rows
+// 1. Add view controller for a new screen
+// 2. Add Done and Cancel buttons
+// 3. Add tablview c/w text view to add item screen
+// 4. Add ability to read from the text field and add new items
 
 
 
