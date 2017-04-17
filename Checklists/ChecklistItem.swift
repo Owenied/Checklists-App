@@ -8,11 +8,12 @@
 
 import Foundation
 
-class ChecklistItem {
+class ChecklistItem: NSObject {
     
     // Variables
     var text = ""
     var checked = false
+    
     
     // Checkmark on / off
     func toggleChecked() {
