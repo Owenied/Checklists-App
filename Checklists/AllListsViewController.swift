@@ -63,7 +63,8 @@ class AllListsViewController: UITableViewController {
     // Create a segue for each Checklist Category
     override func tableView(_ tableView: UITableView,
                             didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ShowChecklist", sender: nil)
+        let checklist = lists[indexPath.row]
+        performSegue(withIdentifier: "ShowChecklist", sender: checklist)
     }
     
     // Creates the cells for the Checklist Categories to be displayed on the screen
@@ -76,5 +77,46 @@ class AllListsViewController: UITableViewController {
                                    reuseIdentifier: cellIdentifier)
         }
     }
+    
+    // This function gives the Checklist object to the ChecklistViewController
+    override func prepare(for segue: UIStoryboardSegue,
+                          sender: Any?) {
+        if segue.identifier == "ShowChecklist" {
+            let controller = segue.destination as! ChecklistViewController
+            controller.checklist = sender as! Checklist
+        }
+    }
  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

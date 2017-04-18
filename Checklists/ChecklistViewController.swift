@@ -11,6 +11,7 @@ import UIKit
 class ChecklistViewController: UITableViewController, ItemDetailViewControllerDelegate {
     
     var items: [ChecklistItem]
+    var checklist: Checklist!
     
     // Current data model
     required init?(coder aDecoder: NSCoder) {
@@ -24,6 +25,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = checklist.name
     }
 
     override func didReceiveMemoryWarning() {
@@ -185,7 +187,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 
 // To-do List:
 // -----------
-// 1. Create a top level Checklist Categories checklist
+// 1.
 
 
 
