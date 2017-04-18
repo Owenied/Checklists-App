@@ -24,7 +24,6 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +31,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         // Dispose of any resources that can be recreated.
     }
     
-    // the number of rows in the app based on the size of the storage array
+    // The number of rows in the app based on the size of the storage array
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
         return items.count
@@ -137,6 +136,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         }
     }
     
+    // Edit and save a To Do item
     func itemDetailViewController(_ controller: ItemDetailViewController,
                                didFinishEditing item: ChecklistItem) {
         if let index = items.index(of: item) {
@@ -149,16 +149,19 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         saveChecklistItems()
     }
     
+    // Get the Documents Directory path
     func documentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory,
                                              in: .userDomainMask)
         return paths[0]
     }
     
+    // Get the Data File path
     func dataFilePath() -> URL {
         return documentsDirectory().appendingPathComponent("Checklists.plist")
     }
     
+    // Saving the data
     func saveChecklistItems() {
         let data = NSMutableData()
         let archiver = NSKeyedArchiver(forWritingWith: data)
@@ -167,6 +170,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         data.write(to: dataFilePath(), atomically: true)
     }
     
+    // Loading the data
     func loadChecklistItems() {
         let path = dataFilePath()
         
@@ -181,7 +185,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 
 // To-do List:
 // -----------
-// 1. Persist data to file and reload
+// 1. Create a top level Checklist Categories checklist
 
 
 

@@ -10,6 +10,28 @@
     </dependencies>
     <scenes>
         <!--Checklists-->
+        <scene sceneID="StR-qu-YwD">
+            <objects>
+                <tableViewController id="mXt-cX-mfQ" customClass="AllListsViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JqL-E8-tuh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="mXt-cX-mfQ" id="pzW-Js-V9o"/>
+                            <outlet property="delegate" destination="mXt-cX-mfQ" id="ieJ-a3-9vH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Checklists" id="cdv-UH-A5l"/>
+                    <connections>
+                        <segue destination="sWx-WI-M50" kind="show" identifier="ShowChecklist" id="K6Y-be-c8T"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLh-TG-iye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236" y="75"/>
+        </scene>
+        <!--(Name of the Checklist)-->
         <scene sceneID="jDm-UU-PkL">
             <objects>
                 <tableViewController id="sWx-WI-M50" customClass="ChecklistViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,7 +73,7 @@
                             <outlet property="delegate" destination="sWx-WI-M50" id="hul-8p-6bK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklists" id="fCW-EZ-3Nc">
+                    <navigationItem key="navigationItem" title="(Name of the Checklist)" id="fCW-EZ-3Nc">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uc5-WN-iw9">
                             <connections>
                                 <segue destination="VhV-gl-ftf" kind="presentation" identifier="AddItem" id="2Tc-5E-Z6V"/>
@@ -135,12 +157,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="sWx-WI-M50" kind="relationship" relationship="rootViewController" id="i6A-7y-7Eo"/>
+                        <segue destination="mXt-cX-mfQ" kind="relationship" relationship="rootViewController" id="tYl-qs-WIr"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQN-L7-jzX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="285" y="75"/>
+            <point key="canvasLocation" x="-638" y="75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IfS-hm-0SG">
