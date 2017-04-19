@@ -187,7 +187,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 
 // To-do List:
 // -----------
-// 1.
+// 1. Add the Add Checklist / Edit Checklist screen
 
 
 

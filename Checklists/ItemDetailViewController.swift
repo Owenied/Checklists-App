@@ -39,6 +39,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         textField.becomeFirstResponder()
     }
     
+    // Load the view
     override func viewDidLoad() {
         super.viewDidLoad()
         

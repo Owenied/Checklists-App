@@ -16,6 +16,7 @@
 		49809D5C1EA04BB100AE64EC /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49809D5B1EA04BB100AE64EC /* ItemDetailViewController.swift */; };
 		49EFBA361EA57760005B9C5C /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EFBA351EA57760005B9C5C /* AllListsViewController.swift */; };
 		49EFBA381EA64BB1005B9C5C /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EFBA371EA64BB1005B9C5C /* Checklist.swift */; };
+		49EFBA3A1EA6951D005B9C5C /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EFBA391EA6951D005B9C5C /* ListDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		49809D5B1EA04BB100AE64EC /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ItemDetailViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		49EFBA351EA57760005B9C5C /* AllListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
 		49EFBA371EA64BB1005B9C5C /* Checklist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
+		49EFBA391EA6951D005B9C5C /* ListDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				49809D5B1EA04BB100AE64EC /* ItemDetailViewController.swift */,
 				49EFBA351EA57760005B9C5C /* AllListsViewController.swift */,
 				49EFBA371EA64BB1005B9C5C /* Checklist.swift */,
+				49EFBA391EA6951D005B9C5C /* ListDetailViewController.swift */,
 				49809D4B1E9EEF8100AE64EC /* Main.storyboard */,
 				49809D4E1E9EEF8100AE64EC /* Assets.xcassets */,
 				49809D501E9EEF8100AE64EC /* LaunchScreen.storyboard */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49809D4A1E9EEF8100AE64EC /* ChecklistViewController.swift in Sources */,
+				49EFBA3A1EA6951D005B9C5C /* ListDetailViewController.swift in Sources */,
 				49809D5C1EA04BB100AE64EC /* ItemDetailViewController.swift in Sources */,
 				49EFBA381EA64BB1005B9C5C /* Checklist.swift in Sources */,
 				49809D5A1EA00CF300AE64EC /* ChecklistItem.swift in Sources */,
