@@ -141,8 +141,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 
 // To-do List:
 // -----------
-// 1. Change how the app data is saved in the App Delegate file
-// 2. Update app for first time usage by user
+// 1. Improve user experience by showing the number of remaining items as a sub label
 
 
 

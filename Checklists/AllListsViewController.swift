@@ -37,6 +37,15 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         cell.textLabel!.text = checklist.name
         cell.accessoryType = .detailDisclosureButton
         
+        let count = checklist.countUncheckedItems()
+        if checklist.items.count == 0 {
+            cell.detailTextLabel!.text = "(No Items)"
+        } else if count == 0 {
+            cell.detailTextLabel!.text = "All Done"
+        } else {
+            cell.detailTextLabel!.text = "\(count) Remaining"
+        }
+        
         return cell
     }
     
@@ -81,7 +90,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) {
             return cell
         } else {
-            return UITableViewCell(style: .default,
+            return UITableViewCell(style: .subtitle,
                                    reuseIdentifier: cellIdentifier)
         }
     }
@@ -156,6 +165,12 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
             let checklist = dataModel.lists[index]
             performSegue(withIdentifier: "ShowChecklist", sender: checklist)
         }
+    }
+    
+    // Reloads the data so that the subtitle of labels become visible
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
 }
