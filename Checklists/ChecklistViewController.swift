@@ -141,7 +141,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 
 // To-do List:
 // -----------
-// 1. Improve user experience by showing the number of remaining items as a sub label
+// 1. Add ability to sort checklists
 
 
 
