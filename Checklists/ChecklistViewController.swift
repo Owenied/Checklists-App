@@ -76,6 +76,8 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         } else {
             label.text = ""
         }
+        
+        label.textColor = view.tintColor
     }
     
     // Configure text function
@@ -141,7 +143,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 
 // To-do List:
 // -----------
-// 1. Add ability to sort checklists
+// 1. Add ability to include icons with checklists and give the app its own icon
 
 
 

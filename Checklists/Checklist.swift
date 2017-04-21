@@ -12,17 +12,25 @@ class Checklist: NSObject, NSCoding {
     
     var name = ""
     var items = [ChecklistItem]()
+    var iconName: String
     
     // Necessary method for NSCoding
     required init?(coder aDecoder: NSCoder) {
         name = aDecoder.decodeObject(forKey: "Name") as! String
         items = aDecoder.decodeObject(forKey: "Items") as! [ChecklistItem]
+        iconName = aDecoder.decodeObject(forKey: "IconName") as! String
         super.init()
     }
     
     // Initialise a Checklist item properties (for the checklist categories)
-    init(name: String) {
+    convenience init(name: String) {
+        self.init(name: name, iconName: "No Icon")
+    }
+    
+    // Initialise the setting of the icon name
+    init(name: String, iconName: String) {
         self.name = name
+        self.iconName = iconName
         super.init()
     }
     
@@ -30,6 +38,7 @@ class Checklist: NSObject, NSCoding {
     func encode(with aCoder: NSCoder) {
         aCoder.encode(name, forKey: "Name")
         aCoder.encode(items, forKey: "Items")
+        aCoder.encode(iconName, forKey: "IconName")
     }
     
     // Method to count remaining items to be completed
