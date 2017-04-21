@@ -143,7 +143,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 
 // To-do List:
 // -----------
-// 1. Add ability to include icons with checklists and give the app its own icon
+// 1. 
 
 
 
