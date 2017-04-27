@@ -83,8 +83,11 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     // Configure text function
     func configureText(for cell: UITableViewCell,
                        with item: ChecklistItem) {
+        
         let label = cell.viewWithTag(1000) as! UILabel
-        label.text = item.text
+        
+        // label.text = item.text
+        label.text = "\(item.itemID): \(item.text)"
     }
     
     // ItemDetailViewControllerDegegate Protocol methods to cancel
@@ -138,12 +141,11 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         dismiss(animated: true, completion: nil)
     }
     
-    
 }
 
 // To-do List:
 // -----------
-// 1. 
+// 1. Add local notifications functionality for user reminders
 
 
 
