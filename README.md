@@ -22,7 +22,7 @@ This app allows you to create checklists and checklist items that can be ticked 
 
 ![](App%20Screen%20Shots/DeletingAnItem.png)
 
-                         Above: Screenshot of the "Deleting an Item" screen in the Checklists app
+                         Above: Screenshot of "Deleting an Item" in the Checklists app
 
 ![](App%20Screen%20Shots/AlertPopup.png)
 
@@ -30,7 +30,7 @@ This app allows you to create checklists and checklist items that can be ticked 
 
 ![](App%20Screen%20Shots/DeletingAChecklist.png)
 
-                         Above: Screenshot of the "Deleting a Checklist" screen in the Checklists app
+                         Above: Screenshot of "Deleting a Checklist" in the Checklists app
                          
 
 Code Source: Ray Wenderlich - iOS Apprentice Book - https://www.raywenderlich.com
